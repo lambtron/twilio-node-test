@@ -10,11 +10,11 @@ server.listen(port, function() {
 
 // Configuration.
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
 app.use('/assets', express.static(__dirname + '/assets'));
 app.use(express.bodyParser());
+app.engine('html', require('ejs').renderFile);
 
 // routing
 app.get('/', function (req, res) {
-  res.render('index.jade');
+  res.render('index.html');
 });
