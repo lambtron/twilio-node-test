@@ -1,4 +1,4 @@
-Phantchat
-=========
+NodeJS Twilio test
+====
 
-Chat on the web like how you chat in real life.
+Testing making multiple API calls to Twilio with NodeJS.
