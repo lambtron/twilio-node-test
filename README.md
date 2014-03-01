@@ -4,9 +4,9 @@ NodeJS Twilio test
 Testing making multiple API calls to Twilio with NodeJS.
 
 To run, replace with your Twilio Account SID, Twilio Auth Token, Twilio phone
-number, and TwiML. Then:
+number, and TwiML in ./app.js. Then run the below on the command line:
 
-node app.js
+$ node app.js
 
 Then, in your browser, go to localhost:3000/test
 

@@ -5,7 +5,7 @@ var express = require('express')
   , moment = require('moment');
 
 // Twilio library for node.
-var client = require('twilio')('Your Twilio Account SID',
+var client = require('twilio')('Your Twilio AccountSID',
   	'Your Twilio Auth Token');
 
 // Running the node server.
@@ -30,11 +30,13 @@ app.get('/test', function (req, res) {
 	// Epoch time stamp when the test begins.
 	console.log("Test starts: " + moment().format("dddd, MMMM Do YYYY, h:mm:ss:SSS a"));
 
-	for(var i = 0; i < 100; i++) {
+	for(var i = 0; i < 50; i++) {
 		client.makeCall({
-	    to: '+1415xxxxxx', // Any number Twilio can call
-	    from: 'Your Twilio Phone number', // A number you bought from Twilio and can use for outbound communication
-	    url: 'http://twimlbin.com/xxxxxx' // A URL that produces an XML document (TwiML) which contains instructions for the call
+	    to: '+1415xxxxxxx', // Any number Twilio can call
+	    from: '+1510xxxxxxx', // A number you bought from Twilio and can use for outbound communication
+	    url: 'http://twimlbin.com/xxxxxxxx' // A URL that produces an XML document (TwiML) which contains instructions for the call
+		}, function (err, responseData) {
+			console.log(responseData.sid);
 		});
 	}
 
